@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "VoltageRelayMoreVoltageRelayWork";
+}
+
+<h1>Проверить состояние путевого реле(ДСШ)</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="TrackRelayUnderAmperage">Реле под током. Якорь в поднятом положении.</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="TrackRelayWithoutAmperage">Реле без тока. Якорь в снизу.</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>
+

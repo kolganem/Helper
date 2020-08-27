@@ -1,0 +1,81 @@
+﻿
+@model IEnumerable<MyDiplom.Models.Device>
+
+@{
+    ViewData["Title"] = "Find_for_typeDevice";
+}
+
+<h1>Finding device by type</h1>
+<label>Enter type device or part of his type: </label>
+<form method="POST">
+    <input type="text" name="text_for_search" />
+    <input class="btn btn-info" type="submit" value="Поиск" />
+</form>
+
+@if (Model != null && Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlaceOnStand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.typeDevice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumberDevice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.YearDevice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateCheck)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateFutureCheck)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Stand)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlaceOnStand)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.typeDevice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumberDevice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YearDevice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateCheck)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateFutureCheck)
+                    </td>
+                    @*<td>
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to homepage</a>
+</div>

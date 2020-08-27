@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "CentralSwitchTwoWire";
+}
+
+<h1>При повороте стрелочной рукоятки стрелка амперметра:</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="ArrowDoesntMove">Стрелка амперметра не отклоняется</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="ArrowMakesSmallThrow">Делает небольшой бросок</a>
+                <hr>
+            </div>
+
+        </li>
+        <li>
+            <div>
+                <a asp-action="Arrow_2_5secondShowWorkingAmperage">2-5 сек. показывает рабочий ток</a>
+                <hr>
+            </div>
+
+        </li>
+        <li>
+            <div>
+                <a asp-action="ArrowConstantlyShowingToqueFriction">Постоянно показывет ток фрикции</a>
+                <hr>
+            </div>
+
+        </li>
+    </ol>
+</div>
+    
+
+

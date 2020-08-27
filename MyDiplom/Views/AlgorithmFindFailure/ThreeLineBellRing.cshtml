@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "ThreeLineBellRing";
+}
+
+<h1>Что происходит при обратном переводе стрелки в исходное положение:</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="ThreeLineLampIsntOnBellRing">Лампа не горит, звонок звонит</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="ThreeLineLampIsOnBellDoesntRing">Лампа горит, звонок не звонит</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="ThreeLineLampIsntOnBellDoesntRing">Лампа не горит, звонок не звонит</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>

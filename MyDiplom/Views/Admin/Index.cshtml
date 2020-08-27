@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+@using Microsoft.AspNetCore.Identity
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All users</h1>
+
+<a asp-area="Identity" asp-page="/Account/Register" class="btn btn-outline-secondary">Добавить юзера</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+
+                <td>
+                    <a asp-controller="Role" asp-action="giveAccess" asp-route-id=@item.Id class="btn btn-outline-secondary">
+                        <span class="fa fa-unlock-alt"></span>
+                    </a>
+                    <a asp-action="Delete" asp-route-id=@item.Id class="btn btn-outline-secondary">
+                        <span class="fa fa-times-circle"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

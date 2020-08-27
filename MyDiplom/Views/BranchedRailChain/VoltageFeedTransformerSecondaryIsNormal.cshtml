@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "VoltageFeedTransformerSecondaryIsNormal";
+}
+
+<h1>Какое напряжение на путевом реостате(регулируемом сопротивлении) в питающей коробке ?</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="VoltageOnReostatFeedEndLessNormal">U < нормального</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="VoltageOnReostatFeedEndMoreNormal">U > нормального</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>

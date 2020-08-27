@@ -1,0 +1,119 @@
+﻿@model IEnumerable<MyDiplom.Models.Device>
+
+@{
+    ViewData["Title"] = "PlanReplacing";
+}
+
+<h1>PlanReplacing</h1>
+
+<form method="POST">
+    <table>
+        <tr>
+            <td>
+                <label class="leftColPlanRepl">Date start replacing(dd.mm.yyyy)</label><br />
+                <div class="text-center">
+                    <input type="text" name="startDate" value="@ViewBag.StartDate" />
+                </div>
+
+            </td>
+            <td width="20">
+            </td>
+            <td>
+                <label>Date finish replacing(dd.mm.yyyy)</label><br />
+                <div class="text-center">
+                    <input type="text" name="finishDate" value="@ViewBag.FinishDate" />
+                </div>
+            </td>
+            <td width="200" valign="bottom">
+                <div class="text-center align-content-md-center">
+                    <input id="myBut" class="btn btn-info" type="submit" value="Search" />
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</form>
+@if (Model != null && Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Stand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlaceOnStand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.typeDevice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumberDevice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.YearDevice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateCheck)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateFutureCheck)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Stand)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlaceOnStand)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.typeDevice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumberDevice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YearDevice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateCheck)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateFutureCheck)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@if (Model != null && Model.Count() > 0)
+{
+    <div>
+        @using (Html.BeginForm("Export", "Devices", FormMethod.Post, new { enctype = "multipart/form-data", id = "frm-excel" }))
+        {
+            <div>
+                <div>
+                    <input type="text" name="startDate" value="@ViewBag.StartDate" hidden />
+                    <input type="submit" value="Export" />
+                    <input type="text" name="finishDate" value="@ViewBag.FinishDate" hidden />
+                </div>
+            </div>
+        }
+
+    </div>
+}
+
+    <div>
+        <a asp-controller="Home" asp-action="Index">Back to homepage</a>
+    </div>

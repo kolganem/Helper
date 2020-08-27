@@ -1,0 +1,53 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Documentation";
+}
+
+@if (Model == null || Model.Count() == 0)
+{
+    <div class="row">
+        <div class="col-4">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" asp-controller="Document" asp-action="Switch">Стрелка</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Document" asp-action="Light">Светофор</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Рельсовая цепь</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-8">
+
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-4">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active">Стрелка - 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Светофор - 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Рельсовая цепь - 2</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-8">
+            @foreach (string temp in Model)
+            {
+                
+                    @temp
+               
+            }
+        </div>
+    </div>
+
+}

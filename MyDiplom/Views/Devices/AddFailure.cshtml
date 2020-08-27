@@ -1,0 +1,45 @@
+﻿@model MyDiplom.Models.Failure
+
+@{
+    ViewData["Title"] = "AddFailure";
+}
+
+<h1>Create</h1>
+
+<h4>Failure</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddFailure">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DateFailure" class="control-label"></label>
+                <input asp-for="DateFailure" class="form-control" />
+                <span asp-validation-for="DateFailure" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reason" class="control-label"></label>
+                <input asp-for="Reason" class="form-control" />
+                <span asp-validation-for="Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consequence" class="control-label"></label>
+                <input asp-for="Consequence" class="form-control" />
+                <span asp-validation-for="Consequence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeviceId" hidden="hidden" class="control-label"></label>
+                <input asp-for="DeviceId" type="text" class="form-control" hidden="hidden" readonly value="@ViewData["DeviceId"]"/>
+                <span asp-validation-for="DeviceId"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="AddFailure" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

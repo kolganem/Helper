@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "ArrowDoesntMove";
+}
+
+<h1>При повернутой рукоятке:</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="RedLampIsOnBellDoesntRing">Красная лампа горит, звонок не звонит</a>
+                <hr>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="RedLampIsntOnBellDoesntRing">Красная лампа не горит, звонок не звонит. Реле НПС, ППС не возбуждаются</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="RedLampOnBellRing">Красная лампа горит, звонок звонит.</a>
+                <hr>
+            </div>
+        </li>        
+    </ol>
+</div>

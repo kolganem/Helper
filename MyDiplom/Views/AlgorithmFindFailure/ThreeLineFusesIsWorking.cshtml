@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "ThreeLineFusesIsWorking";
+}
+
+<h1>Измерить напряжение постоянного тока (U -) и переменного тока ( U ~) на клеммах Л-ОЛ</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="ThreeLineVoltaheEqual_0_or_Unominal">U(-) = 0, U(~) = 0 или U(-) = Un, U(~) = Un</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="ThreeLineVoltageEqual_Unominal_and_Uless_">U(~) = Un, U(-) = < 0,35*U(~)</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "ThreeLineBellDoesntRing";
+}
+
+<h1>Под током ли реле ПК(МК) в блоке С ?</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="ThreeLineRelayPK_MK_WithoutAmperage">Нет, не под током</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="ThreeLineRelayPK_MK_WithAmperage">Да, под током</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>

@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "VoltageCellLessNormal";
+}
+
+<h1>Проверить напряжение питания ПХ220 на клемах питания шкафа</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="SupplyVoltageLessNormal">Ниже нормы</a>
+                <hr>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="SupplyVoltageIsNormal">В пределах нормы</a>
+                <hr>
+            </div>
+        </li>
+
+    </ol>
+</div>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MyDiplom.Models.Failure>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Failures</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFailure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consequence)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Device)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateFailure)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Reason)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Consequence)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Device.Id)
+                </td>*@
+                @*<td>
+                    <a asp-controller="Failures"  asp-action="Edit" asp-route-id="@item.FailureId">Edit</a> |                    
+                    <a asp-controller="Failures" asp-action="Delete" asp-route-id="@item.FailureId">Delete</a>
+                </td>*@
+            </tr>
+        }
+    </tbody>
+</table>

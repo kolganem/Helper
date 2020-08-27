@@ -1,0 +1,34 @@
+﻿.body {
+}
+.myBut {
+    align-content:center;
+    vertical-align: central;
+    
+}
+.myPhoto_1 {
+    width:100%;
+
+}
+.myPhoto_2 {
+    width: 100%;
+
+}
+.myPhoto_3 {
+    width: 100%;
+
+}
+#IconFace {
+    color: grey;
+}
+#IconVK {
+    color: grey;
+}
+#IconTwitt {
+    color: grey;
+}
+#IconContact {
+    color: grey;
+}
+#IconRW {
+    color: grey;
+}

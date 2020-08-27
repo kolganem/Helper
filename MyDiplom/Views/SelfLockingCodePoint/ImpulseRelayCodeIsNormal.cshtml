@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "ImpulseRelayCodeIsNormal";
+}
+
+<h1>Проверить напряжения СХ-МСХ подаваемое на вход ячейки</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="VoltageCellLessNormal">Ниже нормы</a>
+                <hr>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="VoltageCellIsNormal">В пределах нормы</a>
+                <hr>
+            </div>
+        </li>      
+
+    </ol>
+</div>

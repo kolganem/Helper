@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "RedLampIsOnBellDoesntRing";
+}
+
+<h1>При повёрнутой стрелочной рукоятке имеется ли напряжение на клеммах блока ПС, 1(2)-5; 1(2)-6; 1(2)-17</h1>
+
+<div>
+    <ol>
+
+        <li>
+            <div>
+                <a asp-action="YesIsVoltage">Да, напряжение есть</a>
+                <hr>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="NoIsntVoltage">Нет, напряжение нету</a>
+                <hr>
+            </div>
+        </li>
+        
+    </ol>
+</div>

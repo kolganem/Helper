@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MyDiplom.Models.Device>
+
+@{
+    ViewData["Title"] = "ShowDeviceForAll";
+}
+
+<h1>Info about devices</h1>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Stand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceOnStand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeDevice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberDevice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearDevice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCheck)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFutureCheck)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PlaceOnStand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.typeDevice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberDevice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YearDevice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCheck)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateFutureCheck)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

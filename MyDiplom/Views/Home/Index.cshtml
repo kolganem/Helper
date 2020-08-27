@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div name="karousel" id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item">            
+            <div class="text-center">
+                <img id="myPhoto_1" src="~/Picture/manevrov.jpg" width="100%" class="img-fluid." alt="Адаптивные изображения">
+            </div>
+            
+            <div class="container">
+                @*<div class="carousel-caption text-center">
+                   
+                    <p><a class="btn btn-lg btn-secondary" href="#" role="button">Sign up today</a></p>
+                </div>*@
+            </div>
+        </div>
+        <div class="carousel-item active carousel-item">           
+            <div class="text-center">
+                <img id="myPhoto_2" src="~/Picture/two poezda on site.jpg" width="100%" class="img-fluid." alt="Адаптивные изображения">
+            </div> 
+            <div class="container">
+                @*<div class="carousel-caption text-center">
+                   
+                    <p><a class="btn btn-lg btn-link" href="#" role="button">Learn more</a></p>
+                </div>*@
+            </div>
+        </div>
+        <div class="carousel-item carousel-item-next carousel-item container-fluid">
+            <div class="text-center">
+                <img id="myPhoto_3" src="~/Picture/trainAutumn.jpg" width="100%" class="img-fluid." alt="Адаптивные изображения">
+            </div>
+            @*<div class="carousel-caption text-center">                
+                <p><a class="btn btn-lg btn-link" href="#" role="button">Browse gallery</a></p>
+            </div>*@
+        </div>
+     </div>
+    
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="containerHeading text-center" >
+    <div class="row">
+        <div class="col-md-4">
+            <div id="Devices">
+                <img src="~/Picture/Relay.jpg" width="300" height="600" class="img-fluid" alt="Релейная">
+            </div>
+            <p><a class="btn btn-secondary"  asp-controller="Devices" asp-action="ShowDeviceForAll" role="button">Devices</a></p>
+        </div>
+        <div class="col-md-4">
+            <div id="troubleshooting" >
+                <img src="~/Picture/TroubleShooting.jpg" width="200" height="400" class="img-fluid" alt="Устранение отказов">
+            </div>            
+            @*<p>troubleshooting</p>*@
+            <p><a class="btn btn-secondary" asp-controller="AlgorithmFindFailure" asp-action="CentralSwitchTwoWire" role="button">Railway switch</a></p>
+        </div>
+        <div class="col-md-4">
+            <div id="graph">
+                <img src="~/Picture/graph.jpg" width="200" height="400" class="img-fluid bg-light" alt="График замены приборов">
+            </div>
+            <p><a class="btn btn-secondary" asp-controller="Devices" asp-action="PlanReplacing" role="button">Replacement graph</a></p>
+        </div>
+    </div>
+</div>

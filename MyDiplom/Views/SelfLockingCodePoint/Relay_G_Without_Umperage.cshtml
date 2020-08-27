@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Relay_G_Without_Umperage";
+}
+
+<h1>Какой характер работы импульсного путевого реле (ИМВШ) ?</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="ImpulseRelayWithoutAmperage">Без тока.</a>
+                <hr>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="ImpulseRelayCorruptCode">Искажённый код.</a>
+                <hr>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="ImpulseRelayCodeIsNormal">Нормальный код.</a>
+                <hr>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="ImpulseRelayWithAmperage">Под током.</a>
+                <hr>
+            </div>
+        </li>
+
+    </ol>
+</div>

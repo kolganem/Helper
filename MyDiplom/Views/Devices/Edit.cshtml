@@ -1,0 +1,64 @@
+﻿@model MyDiplom.Models.Device
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Device</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label class="font-weight-bold">Статив</label>
+                <input asp-for="Stand" class="form-control" />
+                <span asp-validation-for="Stand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Место</label>
+                <input asp-for="PlaceOnStand" class="form-control" />
+                <span asp-validation-for="PlaceOnStand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Тип</label>
+                <input asp-for="typeDevice" class="form-control" />
+                <span asp-validation-for="typeDevice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Номер</label>
+                <input asp-for="NumberDevice" class="form-control" />
+                <span asp-validation-for="NumberDevice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Год</label>
+                <input asp-for="YearDevice" class="form-control" />
+                <span asp-validation-for="YearDevice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Дата проверки</label>
+                <input asp-for="DateCheck" type="text" class="form-control" />
+                <span asp-validation-for="DateCheck" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Дата замены</label>
+                <input asp-for="DateFutureCheck" type="text" class="form-control" />
+                <span asp-validation-for="DateFutureCheck" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MyDiplom.Models.Failure>
+
+@{
+    ViewData["Title"] = "ForAdminFailure";
+}
+
+<h1>Failures for Admin</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFailure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consequence)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateFailure)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Reason)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Consequence)
+                </td>
+                
+            <td>
+                <a asp-controller="Failures" asp-action="Edit" asp-route-id=@item.FailureId class="btn btn-outline-info">
+                    <span class="fa fa-pencil"></span>
+                </a>
+                <a asp-controller="Failures" asp-action="Delete" asp-route-id=@item.FailureId class="btn btn-outline-danger">
+                    <span class="fa fa-close"></span>
+                </a>
+            </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,60 @@
+﻿@model MyDiplom.Models.Device
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Device</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <labe>Статив</labe>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stand)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Место</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlaceOnStand)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Тип прибора</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.typeDevice)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Номер прибора</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumberDevice)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Год</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.YearDevice)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Дата поверки</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateCheck)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Дата замены</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateFutureCheck)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="ForAdminDevice">Back to List</a>
+</div>

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "VoltageRelayOnTransformerSameAtPost";
+}
+
+<h1>При отключении одного троса релейного конца одной из разветвлённых рельсовых цепей(обесточить одну ветку РЦ), напряжения что делает?</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="VoltageDoesntChangeAfterShutdown">Не меняется</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="VoltageGrowSharplyAfterShutdown">Резко растёт</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>

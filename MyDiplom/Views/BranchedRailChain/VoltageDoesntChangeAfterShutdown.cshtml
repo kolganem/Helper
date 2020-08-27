@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "VoltageDoesntChangeAfterShutdown";
+}
+
+<h1>Напряжение на высокой стороне питающего(понижающего) трасформатора РЦ (первичная обмотка) ?</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="VoltageFeedTransformerPrimaryEqualNull">Близка к нулю</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="VoltageFeedTransformerPrimaryIsNormal">Нормальное</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>

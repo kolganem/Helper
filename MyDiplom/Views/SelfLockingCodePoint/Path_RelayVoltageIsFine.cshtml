@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Path_RelayVoltageIsFine";
+}
+
+<h1>Проверить исправность работы фильтра ЗБФ(ФП). Сравнив напряжение на его входе и выходе.</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="FilterIs_NotOK">Неисправен</a>
+                <hr>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="FilterIs_OK">Исправен</a>
+                <hr>
+            </div>
+        </li>
+
+
+
+    </ol>
+</div>

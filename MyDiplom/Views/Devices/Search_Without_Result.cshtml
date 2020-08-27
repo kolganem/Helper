@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Search_Without_Result";
+}
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <center>
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Поиск не дал результатов</h5>
+            </div>
+        </center>
+
+        <div class="modal-body">
+            @ViewData["Message"]
+        </div>
+        <div class="modal-footer align-items-center">
+            <center>
+                <div>
+                    <a asp-controller="Home" asp-action="Index">Back to homepage</a>
+                </div>
+            </center>
+        </div>
+    </div>
+</div>
+
+

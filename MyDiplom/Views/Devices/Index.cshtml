@@ -1,0 +1,89 @@
+﻿@model IEnumerable<MyDiplom.Models.Device>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Info about devices</h1>
+<table>
+    <tr>      
+        <td class="leftcol">
+            <a class="btn btn-outline-light bg-success" asp-action="Create">
+                <span class="fa fa-plus fa-2x"></span>
+            </a>
+        </td>
+        <td class="spacer"></td>
+        <td class="rightcol">
+            <div class="text text-center text-dark">
+                <text>
+                    Add device
+                </text>
+            </div>
+        </td>
+        
+    </tr>
+</table> 
+
+<table class="table table-hover" >
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Stand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceOnStand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeDevice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberDevice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearDevice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCheck)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFutureCheck)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PlaceOnStand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.typeDevice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberDevice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YearDevice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCheck)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateFutureCheck)
+                </td>
+                <td>
+                    @*<a asp-controller="Devices" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-controller="Devices" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-controller="Devices" asp-action="Delete" asp-route-id="@item.Id">Delete</a> |*@
+                    <a asp-controller="Devices" asp-action="ShowFailures" asp-route-id="@item.Id">Отказы</a> |
+                    <a asp-controller="Devices" asp-action="AddFailure" asp-route-id="@item.Id">Добавить отказ</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

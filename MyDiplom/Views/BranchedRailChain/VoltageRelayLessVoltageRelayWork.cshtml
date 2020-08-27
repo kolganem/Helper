@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "VoltageRelayLessVoltageRelayWork";
+}
+
+    <h1>Какое напряжение на повышающем трансформатор релейного конца РЦ ? (ПЯ, высокая сторона или вторичная обмотка трансформатора) ?</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="VoltageRelayOnTransformerMoreThanPost">Больше чем на посту</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="VoltageRelayOnTransformerSameAtPost">Такое же как на посту</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>

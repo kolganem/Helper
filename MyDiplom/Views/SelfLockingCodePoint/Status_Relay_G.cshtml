@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Status_Relay_G";
+}
+
+<h1>Какое состояние реле Ж ?</h1>
+
+<div>
+    <ol>
+        <li>
+            <div>
+                <a asp-action="Relay_G_Under_Umperage">Реле Ж под током</a>
+                <hr>
+            </div>
+
+        </li>
+
+        <li>
+            <div>
+                <a asp-action="Relay_G_Without_Umperage">Без тока. Или временно пытается стать под ток</a>
+                <hr>
+            </div>
+
+        </li>
+
+    </ol>
+</div>
