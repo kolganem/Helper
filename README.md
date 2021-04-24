@@ -1,6 +1,6 @@
 ### Helper
 
-#####It is an assistant site for electromechanics SCL that makes life easier for young professionals.
+##### It is an assistant site for electromechanics SCL that makes life easier for young professionals.
 
 ##### Technology:
     - ASP.Net Core 2.2
