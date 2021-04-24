@@ -7,4 +7,4 @@
     - MS SQL Server
     - Entity Framework
 
-[Посмотреть сайт](http://kolganem-001-site1.dtempurl.com/)
+[Go to the site](http://kolganem-001-site1.dtempurl.com/)
